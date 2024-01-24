@@ -323,12 +323,61 @@ header i:hover {
     margin: 0 20vw 180px;
 }
 
+.contact {
+    margin: 20px 32vw 180px;
+    background-color: #1d242e;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.contact .container {
+    padding: 60px 0;
+}
+
 .contact h2 {
     display: flex;
-    color: var(--main--color);
+    color: #dfdfdf;
     font-size: 36px;
     justify-content: center;
-    margin-bottom: 48px;
+    margin-bottom: 20px;
+}
+
+.contact form .inputs{
+    display: flex;
+    flex-direction: column;
+    padding: 0 8%;
+    gap: 24px;
+}
+
+.contact form .inputs input, textarea {
+    background: none;
+    border: 1px solid var(--main--color);
+    padding: 12px;
+    border-radius: 8px;
+    color: #dfdfdf;
+    resize: none;
+    transition: all .3s ease;
+}
+
+.contact form .inputs input::placeholder, textarea::placeholder {
+    color: #969faa;
+}
+
+.contact form .inputs input:focus, textarea:focus {
+    color: #fff;
+    outline: none;
+    border-color: #fff;
+}
+
+.contact form .inputs .submit {
+    background-color: var(--main--color);
+    border: none;
+}
+
+.contact form .inputs .submit:hover {
+    background-color: #402264;
+    color: #fff;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -367,7 +416,16 @@ header i:hover {
     .technologies .container i {
         font-size: 32px;
     }
-  }
+
+    .contact {
+        margin: 20px 8vw 180px;
+    }
+
+    .contact form .inputs {
+        padding: 0 2%;
+    }
+
+}
 @media (min-width: 769px) and (max-width: 1100px) {
     
     header {
@@ -387,5 +445,13 @@ header i:hover {
     
     .proyects .container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact {
+        margin: 20px 24vw 180px;
+    }
+
+    .contact form .inputs {
+        padding: 0 4%;
     }
 }
